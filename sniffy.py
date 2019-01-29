@@ -1,9 +1,10 @@
 import discord
 from auth import token
+from tools import parseMessage
 #import asyncio 
 
 client = discord.Client()
-prefix = "?"
+prefix = "~"
 
 @client.event
 async def on_ready():
@@ -18,7 +19,7 @@ async def on_message(message):
     reply = "Got your message, " + str(message.author.mention) + "!\n"
     reply += "you said: " + message.content
     print(reply)
-    await client.send_message(message.channel, reply)
-    
+    #await client.send_message(message.channel, reply)
+    await client.send_message(message.channel, parseMessage(message))
 
 client.run(token)
