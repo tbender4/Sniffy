@@ -19,14 +19,28 @@ def parseMessage (message):         # The first point of contact for Sniffy.
 def processArguments (parameters):  #returns a message string OR None
   validArg0 = ["info"] #later implement: compare
   validArg1 = ["lever"] #later implement: switch, grommet
-  validArg2 = [] #pull from JSON
 
   data = {} #empty data dictionary
+  
+  if parameters[0] not in validArg0:        #ignore invalid parameters
+      return 
+  if parameters[1] not in validArg1:
+      return
+
   if parameters[1] == "lever":
     absolutePath = os.path.dirname(__file__)
     with open(absolutePath + "/json/levers.json", "r") as data:
       levers = json.load(data)  #imports entire json file
       data = levers
   
-  subData = data[parameters[2]]
-  print(subData)
+  try:
+      subData = data[parameters[2]]
+      print(subData)
+      return formatData(subData)
+  except:
+      print("lever doesn't exist")
+      return
+  
+def formatData(data):       #formats data to a Discord-friendly string
+    #IMPORTANT: replace with Webhooks eventually
+    #Until then format string from dictionary
