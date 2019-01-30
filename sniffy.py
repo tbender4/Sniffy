@@ -1,6 +1,6 @@
 import discord
 from auth import token
-from tools import parseMessage
+from tools import parseMessage, processArguments
 #import asyncio 
 
 client = discord.Client()
@@ -12,14 +12,18 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-  if message.author == client.user:
+  if message.author.bot: #will ignore bots
     return
   
+  if str(message.content).strip == prefix:
+    return
+
   if message.content.startswith(prefix):
-    reply = "Got your message, " + str(message.author.mention) + "!\n"
-    reply += "you said: " + message.content
-    print(reply)
-    #await client.send_message(message.channel, reply)
-    await client.send_message(message.channel, parseMessage(message))
+    parameters = parseMessage(message)
+    if len(parameters) < 2 or parameters == None:
+      return
+    processArguments(parameters)
+
+#    await client.send_message(message.channel, "dank")
 
 client.run(token)
