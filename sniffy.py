@@ -22,8 +22,7 @@ async def on_message(message):
     parameters = parseMessage(message)
     if len(parameters) < 2 or parameters == None:
       return
-    processArguments(parameters)
-
-#    await client.send_message(message.channel, "dank")
+    reply = processArguments(parameters)  #gets back after returning an argument
+    await client.send_message(message.channel, reply)
 
 client.run(token)

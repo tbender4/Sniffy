@@ -5,7 +5,7 @@ import os
 def parseMessage (message):         # The first point of contact for Sniffy.
   messageString = message.content  #pass through full message from main program.
   print("Original message: " + messageString)
-  messageString.lower()
+  messageString = messageString.lower()
 
   #convert message to an array of parameters
   messageString = messageString[1:]   #removes prefix
@@ -30,17 +30,19 @@ def processArguments (parameters):  #returns a message string OR None
   if parameters[1] == "lever":
     absolutePath = os.path.dirname(__file__)
     with open(absolutePath + "/json/levers.json", "r") as data:
-      levers = json.load(data)  #imports entire json file
-      data = levers
-  
-  try:
+      data = json.load(data)  #imports entire json file
+
       subData = data[parameters[2]]
       print(subData)
       return formatData(subData)
-  except:
-      print("lever doesn't exist")
-      return
   
 def formatData(data):       #formats data to a Discord-friendly string
-    #IMPORTANT: replace with Webhooks eventually
-    #Until then format string from dictionary
+  #IMPORTANT: replace with Webhooks eventually
+  #Until then format string from dictionary
+  output = "\n"
+  for i in data:
+    if i != "isSuperceded":
+      output += i + ": " + str(data[i]) + "\n"  #battop: Fanta
+  print (output)
+  return output
+      
