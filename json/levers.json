@@ -12,7 +12,7 @@
     "switch": "Gersung V1623A2",
     "switchSpacing": 16.3,
     "notes": "Notes here",
-    "isSuperceded": false
+    "supercededBy": []
   },
   "309k": {
     "name": "Crown 309K",
@@ -27,7 +27,7 @@
     "switch": "Gersung V1623A3",
     "switchSpacing": 16,
     "notes": "Notes here",
-    "isSuperceded": false
+    "supercededBy": []
   },
   "309mj": {
     "name": "Crown 309MJ",
@@ -42,13 +42,13 @@
     "switch": "Gersung V1623A3",
     "switchSpacing": 16,
     "notes": "Notes here",
-    "isSuperceded": true
+    "supercededBy":[]
   },
   "green": {
     "name": "Green Arcade Lever",
     "isAvailable": false,
     "battop": "Custom",
-    "shaft": 6.7,
+    "shaft": 6.8,
     "collar": "Full",
     "base": "Myoungshin Fanta",
     "bushing": "Custom",
@@ -57,7 +57,7 @@
     "switch": "Panasonic AM51630C69N",
     "switchSpacing": 16.5,
     "notes": "Specialized lever. More details here: <https://imgur.com/a/w8eHR>",
-    "isSuperceded": false
+    "supercededBy": []
   },
   "taeyoung": {
     "name": "Taeyoung Fanta",
@@ -72,6 +72,6 @@
     "switch": "Gersung V1623A2",
     "switchSpacing": 16.5,
     "notes": "Notes here",
-    "isSuperceded": false
+    "supercededBy": []
   }
 }
