@@ -26,8 +26,8 @@ async def on_message(message):
     parameters = parseMessage(message)
     reply = processArguments(parameters)  #gets back either an str or a discord.Embed
     if type(reply) is str:
-        await client.send_message(message.channel, reply)
+      await client.send_message(message.channel, reply)
     else:
-        await client.send_message(message.channel, embed=reply)
+      await client.send_message(message.channel, embed=reply)
 
 client.run(token)

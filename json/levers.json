@@ -2,17 +2,16 @@
   "myoungshin": {
     "name": "Myoungshin Fanta",
     "isAvailable": true,
-    "battop": "Stock Myoungshin Fanta (glossy)",
+    "battop": "Myoungshin Fanta (glossy)",
     "shaft": 9,
     "collar": "Full",
     "base": "Myoungshin Fanta",
-    "bushing": "Stock Myoungshin Fanta",
+    "bushing": "Myoungshin Fanta",
     "grommet": "45A",
-    "actuator": 16.7,
+    "actuator": 16.3,
     "switch": "Gersung V1623A2",
-    "switchSpacing": 16.3,
+    "switchSpacing": 16.5,
     "notes": "Notes here",
-    "supercededBy": "",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
   },
   "309k": {
@@ -27,9 +26,8 @@
     "actuator": 16,
     "switch": "Gersung V1623A3",
     "switchSpacing": 16,
-    "notes": "Notes here",
-    "supercededBy": "",
-    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.png"
+    "notes": "Commonly mistakened with 309 Helpme",
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "309mj": {
     "name": "Crown 309MJ",
@@ -44,8 +42,7 @@
     "switch": "Gersung V1623A3",
     "switchSpacing": 16,
     "notes": "Notes here",
-    "supercededBy": "",
-    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.png"
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "green": {
     "name": "Green Arcade Lever",
@@ -60,13 +57,12 @@
     "switch": "Panasonic AM51630C69N",
     "switchSpacing": 16.5,
     "notes": "Specialized lever. More details here: <https://imgur.com/a/w8eHR>",
-    "supercededBy": "",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
   },
   "taeyoung": {
     "name": "Taeyoung Fanta",
     "isAvailable": true,
-    "battop": "Stock Taeyoung Fanta (matte)",
+    "battop": "Taeyoung Fanta (matte)",
     "shaft": 9,
     "collar": "Full",
     "base": "Taeyoung Fanta",
@@ -74,9 +70,8 @@
     "grommet": "40A",
     "actuator": 15.4,
     "switch": "Gersung V1623A2",
-    "switchSpacing": 16.5,
-    "notes": "Notes here",
-    "supercededBy": "",
+    "switchSpacing": 15.5,
+    "notes": "Sold through Etokki",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
   }
 }

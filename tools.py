@@ -5,26 +5,22 @@ import discord
 from messages import *
 #tools to format strings
 
-displayNames = [
-    "Name: ",
-    "Availability: ",
-    "Battop: ",
-    "Shaft Diameter: ",
-    "Collar type: ",
-    "Base: ",
-    "Bushing: ",
-    "Grommet Hardness: ",
-    "Actuator Diameter: ",
-    "Switch Model: ",
-    "Switch Spacing: ",
-    "Notes: ",
-    "Superceded By: "
- ]
-displayTypes = {
-        "shaft": "{0}mm",
-        #"grommet": "{0}A",
-        "actuator": "{0}mm"
+
+leverDisplayNames = {
+  "name": "Name: ",
+  "isAvailable": "Availability: ",
+  "battop": "Battop: ",
+  "shaft": "Shaft Diameter: ",
+  "collar": "Collar Type: ",
+  "base": "Base: ",
+  "bushing": "Bushing: ",
+  "grommet": "Grommet Tension: ",
+  "actuator": "Actuator Diameter: ",
+  "switch": "Switch Model: ",
+  "switchSpacing": "Switch Spacing: ",
+  "notes": "Notes: "
 }
+
 def parseMessage (message):         # The first point of contact for Sniffy.
   messageString = message.content  #pass through full message from main program.
   print("Original message: " + messageString)
@@ -60,10 +56,9 @@ def processArguments (parameters):  #returns a message string OR None
       data = json.load(data)  #imports entire json file
 
       if len(parameters) == 2:
-          randomKeyAppendedParameter = parameters.append(random.choice(data.keys())
           output = "Available options: " + listOptions(data, parameters)
-          output += "\n Available filters: " + listOptions(data.keys()[0], randomKeyAppendedParameter)
-          return  output
+          return output
+
       subData = data[parameters[2]]
       
       if len(parameters) > 3:
@@ -72,45 +67,71 @@ def processArguments (parameters):  #returns a message string OR None
       #return dataToString(subData)
       return dataToEmbed(subData)
     return confused
-def filterMode(data, parameters)    #dictionary, list of parameters
-    if parameters
+
+def filterMode(data, parameters):   #dictionary, list of parameters
+  filteredData = {}
+  for parameter in parameters:
+    if parameter in data:
+      filteredData.update({parameter:data[parameter]})
+  return filteredData
 
 def listOptions(data, parameters): #exports keys to a list
-    output = ""
-    for key in data.keys():
-        output += "`{}`, ".format(key)
-    output = output[:-2] + "\n"    #removes extra ", "
-    output += "Example: "
-    for parameter in parameters:
-        output += "`{}` ".format(parameter)
-    output += random.choice(data.keys())
-    
-    return output
+  output = ""
+  for key in data:
+    output += "`{}`, ".format(key)
+  output = output[:-2] + "\n"    #removes extra ", "
+  output += "Example: `~"
+  for parameter in parameters:
+    output += "{} ".format(parameter)
+  output += random.choice(list(data))
+  output += "`"
+  
+  return output
 
 def dataToEmbed(data):      #TODO: make this code cleaner
   randomColor = int("0x{:06x}".format(random.randint(0, 0xFFFFFF)), 16)
   print(randomColor)
   embeddedResult = discord.Embed(colour=randomColor)
-
   index = 0
+  #embeddedResult.set_thumbnail(url=data["logo"])
+  print(len(data.keys()))
+  for key in data:
+    if key == "logo":
+      embeddedResult.set_thumbnail(url=data[key])
+    elif key == "isAvailable":
+      status = ""
+      if data[key] == True:
+        status = "In Stock"
+      else:
+        status = "Discontinued"
+      embeddedResult.add_field(name=leverDisplayNames[key], value=status)
+    elif isinstance(data[key], (int, float)):
+      measurementWithUnit = str(data[key]) + "mm"
+      embeddedResult.add_field(name=leverDisplayNames[key], value=measurementWithUnit)
+    else:
+      embeddedResult.add_field(name=leverDisplayNames[key], value=data[key])
+  return embeddedResult
+
   for key in data:
     if key == "logo":                               #direct img URL
-        embeddedResult.set_thumbnail(data[key])
-    elif key = "availability":
-        output = ""
-        if data[key] == True:
-            output = "In Stock"
-        else:
-            output = "Discontinued"
-        embeddedResult.add_field(name=displayNames[index], value=output)
-    elif data[key] == displayTypes[key]:            #adds unit to measurements
-        output = displayTypes[key].format(data[key])
-        embeddedResult.add_field(name=displayNames[index], value=output)
+      embeddedResult.set_thumbnail(url=data[key])
+      print("logo")
+    elif key == "isAvailable":
+      output = ""
+      if data[key] == True:
+        output = "In Stock"
+      else:
+        output = "Discontinued"
+      print(output)
+      embeddedResult.add_field(name=leverDisplayNames[key], value=output)
+    elif isinstance(data[key], int) or isinstance(data[key], float):            #adds unit to measurements
+      output = str(data[key]) + "mm"
+      print(output)
+      embeddedResult.add_field(name=leverDisplayNames[key], value=output)
     else:
-        embeddedResult.add_field(name=displayNames[index], value=data[key])
-    index += 1      #iterates for displayNames
-  
-  embeddedResult.set_footer(text="Report inaccuracies to @thomasbender#9249")
+      print(data[key])
+      embeddedResult.add_field(name=leverDisplayNames[key], value=data[key])
+    index += 1      #iteratleverDisplayNames[key]
   return embeddedResult
   
 def dataToString(data):       #formats data to a Discord-friendly string
@@ -118,9 +139,9 @@ def dataToString(data):       #formats data to a Discord-friendly string
   #Until then format string from dictionary
   output = "\n"
 
-  index = 0  # iterating displayNames
+  index = 0  # iteleverDisplayNames[key]
   for key in data:
-    newLine = "**" + displayNames[index] + ":** " + str(data[key]) + "\n"  #battop: Fanta
+    newLine = "**" + leverDisplayNames[key] + ":** " + str(data[key]) + "\n"  #battop: Fanta
     output += newLine
     index += 1
   print (output)
