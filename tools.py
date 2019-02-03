@@ -56,7 +56,12 @@ def processArguments (parameters):  #returns a message string OR None
 
       if len(parameters) == 2:
           output = "Available options: " + listOptions(data, parameters)
-          output += "\n Available filters: " + listOptions(list(data)[0], parameters[2:])
+          print(data[list(data)[0]])
+
+          #reusing filterOptions with tweaked parameters for filter
+          filterData = data[list(data)[0]]
+          filterParameters = parameters.append(random.choice(list(data)))
+          output += "\n Available filters: " + listOptions(filterData, filterp)
           return output
 
       subData = data[parameters[2]]
