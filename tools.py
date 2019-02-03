@@ -55,13 +55,10 @@ def processArguments (parameters):  #returns a message string OR None
       data = json.load(data)  #imports entire json file
 
       if len(parameters) == 2:
-          output = "Available options: " + listOptions(data, parameters)
+          output = "Available options:\n" + listOptions(data, parameters)
           print(data[list(data)[0]])
-
-          #reusing filterOptions with tweaked parameters for filter
-          filterData = data[list(data)[0]]
-          filterParameters = parameters.append(random.choice(list(data)))
-          output += "\n Available filters: " + listOptions(filterData, filterp)
+          
+          output += "\n\n Available filters:\n" + listOptions(data, parameters)
           return output
 
       subData = data[parameters[2]]
@@ -76,9 +73,17 @@ def processArguments (parameters):  #returns a message string OR None
 def filterMode(data, parameters):   #dictionary, list of parameters
   filteredData = {}
   for parameter in parameters:
-    if parameter in data:
+    if parameter.lower() in map(str.lower, data.keys()):
       filteredData.update({parameter:data[parameter]})
   return filteredData
+
+def listFilters(data, parameters): #exports keys to a list
+  filterData = data[list(data)[0]]
+  filterParameters = parameters.append(random.choice(list(data)))
+  
+  output = listOptions(data, parameters)  #reuse of listOptions
+  optput += "\n Note: multiple filters can be chained.
+  return output
 
 def listOptions(data, parameters): #exports keys to a list
   output = ""
@@ -86,7 +91,7 @@ def listOptions(data, parameters): #exports keys to a list
     output += "`{}`, ".format(key)
   output = output[:-2] + "\n"    #removes extra ", "
   output += "Example: `~"
-  for parameter in parameters:
+  for parameter in parameters: #prints out existing parameters, then adds a random parameter
     output += "{} ".format(parameter)
   output += random.choice(list(data))
   output += "`"
