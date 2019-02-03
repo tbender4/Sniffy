@@ -1,7 +1,7 @@
 {
   "myoungshin": {
     "name": "Myoungshin Fanta",
-    "isAvailable": true,
+    "is_available": true,
     "battop": "Myoungshin Fanta (glossy)",
     "shaft": 9,
     "collar": "Full",
@@ -10,13 +10,13 @@
     "grommet": "45A",
     "actuator": 16.3,
     "switch": "Gersung V1623A2",
-    "switchSpacing": 16.5,
+    "switch_spacing": 16.5,
     "notes": "Notes here",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
   },
   "309k": {
     "name": "Crown 309K",
-    "isAvailable": true,
+    "is_available": true,
     "battop": "Crown 300 series",
     "shaft": 9,
     "collar": "Full",
@@ -25,13 +25,13 @@
     "grommet": "35A",
     "actuator": 16,
     "switch": "Gersung V1623A3",
-    "switchSpacing": 16,
+    "switch_spacing": 16,
     "notes": "Commonly mistakened with 309 Helpme",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "309mj": {
     "name": "Crown 309MJ",
-    "isAvailable": true,
+    "is_available": true,
     "battop": "Crown 300 series",
     "shaft": 9,
     "collar": "Low Profile",
@@ -40,13 +40,13 @@
     "grommet": "25A",
     "actuator": 16,
     "switch": "Gersung V1623A3",
-    "switchSpacing": 16,
+    "switch_spacing": 16,
     "notes": "Notes here",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "green": {
     "name": "Green Arcade Lever",
-    "isAvailable": false,
+    "is_available": false,
     "battop": "Custom",
     "shaft": 6.8,
     "collar": "Full",
@@ -55,13 +55,13 @@
     "grommet": "32A",
     "actuator": 14.5,
     "switch": "Panasonic AM51630C69N",
-    "switchSpacing": 16.5,
+    "switch_spacing": 16.5,
     "notes": "Specialized lever. More details here: <https://imgur.com/a/w8eHR>",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
   },
   "taeyoung": {
     "name": "Taeyoung Fanta",
-    "isAvailable": true,
+    "is_available": true,
     "battop": "Taeyoung Fanta (matte)",
     "shaft": 9,
     "collar": "Full",
@@ -70,7 +70,7 @@
     "grommet": "40A",
     "actuator": 15.4,
     "switch": "Gersung V1623A2",
-    "switchSpacing": 15.5,
+    "switch_spacing": 15.5,
     "notes": "Sold through Etokki",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
   }

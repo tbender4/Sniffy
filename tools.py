@@ -8,7 +8,7 @@ from messages import *
 
 leverDisplayNames = {
   "name": "Name: ",
-  "isAvailable": "Availability: ",
+  "is_available": "Availability: ",
   "battop": "Battop: ",
   "shaft": "Shaft Diameter: ",
   "collar": "Collar Type: ",
@@ -17,7 +17,7 @@ leverDisplayNames = {
   "grommet": "Grommet Tension: ",
   "actuator": "Actuator Diameter: ",
   "switch": "Switch Model: ",
-  "switchSpacing": "Switch Spacing: ",
+  "switch_spacing": "Switch Spacing: ",
   "notes": "Notes: "
 }
 
@@ -56,9 +56,9 @@ def processArguments (parameters):  #returns a message string OR None
 
       if len(parameters) == 2:
           output = "Available options:\n" + listOptions(data, parameters)
-          print(data[list(data)[0]])
           
-          output += "\n\n Available filters:\n" + listOptions(data, parameters)
+          
+          output += "\n\n Available filters:\n" + listFilters(data, parameters)
           return output
 
       subData = data[parameters[2]]
@@ -73,16 +73,22 @@ def processArguments (parameters):  #returns a message string OR None
 def filterMode(data, parameters):   #dictionary, list of parameters
   filteredData = {}
   for parameter in parameters:
-    if parameter.lower() in map(str.lower, data.keys()):
+    if parameter in data:
       filteredData.update({parameter:data[parameter]})
   return filteredData
 
 def listFilters(data, parameters): #exports keys to a list
   filterData = data[list(data)[0]]
-  filterParameters = parameters.append(random.choice(list(data)))
-  
-  output = listOptions(data, parameters)  #reuse of listOptions
-  optput += "\n Note: multiple filters can be chained.
+  filterParameters = parameters
+  filterParameters.append(random.choice(list(data)))
+
+  print("~~~~~~~~~~~~~~~~~LIST FILTERS~~~~~~~~~~~~~~~~~~")
+  print(filterData)
+
+  print(filterParameters)
+
+  output = listOptions(filterData, filterParameters)  #reuse of listOptions
+  output += "\n Note: multiple filters can be chained."
   return output
 
 def listOptions(data, parameters): #exports keys to a list
@@ -115,7 +121,7 @@ def dataToEmbed(data):      #TODO: make this code cleaner
       else:
         status = "Discontinued"
       embeddedResult.add_field(name=leverDisplayNames[key], value=status)
-    elif isinstance(data[key], (int, float)):
+    elif isinstance(data[key], (int, float)) and not isinstance(data[key], bool):
       measurementWithUnit = str(data[key]) + "mm"
       embeddedResult.add_field(name=leverDisplayNames[key], value=measurementWithUnit)
     else:
