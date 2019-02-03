@@ -18,7 +18,7 @@ async def on_message(message):
     return
   
       
-  if str(message.content).strip == prefix:
+  if str(message.content) == prefix:    #just show error message
     await client.send_message(message.channel, confused)
     return
 

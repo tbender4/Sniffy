@@ -41,12 +41,11 @@ def processArguments (parameters):  #returns a message string OR None
 
   data = {} #empty data dictionary
 
-  if parameters[0] not in validArg0:        #ignore invalid parameters
-      return confused
-
   if parameters[0] == "help":
       return helpMessage
 
+  if parameters[0] not in validArg0:        #ignore invalid parameters
+      return confused
   if parameters[1] not in validArg1:
       return confused
 
@@ -57,6 +56,7 @@ def processArguments (parameters):  #returns a message string OR None
 
       if len(parameters) == 2:
           output = "Available options: " + listOptions(data, parameters)
+          output += "\n Available filters: " + listOptions(list(data)[0], parameters[2:])
           return output
 
       subData = data[parameters[2]]
