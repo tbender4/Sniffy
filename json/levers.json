@@ -45,9 +45,9 @@
     "spring": false,
     "grommet": "45A",
     "actuator": 15.6,
-    "switch": "Gersung V1623A2",
+    "switch": "Gersung V1623A3KZ",
     "switch_spacing": 16.5,
-    "notes": "",
+    "notes": "Exclusive A3 switch for this model.",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
   },
   "airbag": {
@@ -67,6 +67,23 @@
     "notes": "Has custom switch support plate",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
   },
+  "alpha": {
+    "name": "IST Alpha Lever",
+    "is_available": true,
+    "battop": "Custom IST battop",
+    "shaft": 9,
+    "mount": "Japanese + Korean",
+    "collar": "Flat",
+    "base": "Custom IST",
+    "bushing": "Custom IST",
+    "spring": false,
+    "grommet": "Varies upon order(25A-45A)",
+    "actuator": 15.7,
+    "switch": "DECO VP533A-2FR",
+    "switch_spacing": 16.5,
+    "notes": "",
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
+  },
   "myoungshin": {
     "name": "Myoungshin Fanta",
     "is_available": true,
@@ -81,8 +98,25 @@
     "actuator": 15.6,
     "switch": "Gersung V1623A2",
     "switch_spacing": 16.5,
-    "notes": "Actuator size varies widely",
+    "notes": "Actuator has changed since 2017(?), originally 16.4mm",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
+  },
+  "infiltration": {
+    "name": "SDL-301-DX (Infiltration Lever)",
+    "is_available": true,
+    "battop": "SDL-301-DX series",
+    "shaft": 13,
+    "mount": "Japanese",
+    "collar": "Low Profile",
+    "base": "Crown 303 (blue)",
+    "bushing": "Oversized CDP",
+    "spring": false,
+    "grommet": "35A",
+    "actuator": 13,
+    "switch": "Gersung V0323A3",
+    "switch_spacing": 16,
+    "notes": "Octagonal restrictor gate available. \"Tekken Head\" replacement actuator available to improve Tekken experience. ",
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "coorejam": {
     "name": "Coorejam Lever",
@@ -115,16 +149,33 @@
     "actuator": 15.3,
     "switch": "Gersung V1623A3",
     "switch_spacing": 16,
-    "notes": "First batch of CDP has 15mm actuator, more oversized bushing",
+    "notes": "First batch of CDP has 15mm actuator, more oversized bushing.\nCustom order possible by contacting Crazydongpal. Kakaotalk: crazydongpal",
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
+  },
+  "309helpme": {
+    "name": "Crown 309 Helpme",
+    "is_available": true,
+    "battop": "Crown 303/307/309 series",
+    "shaft": 9,
+    "mount": "Korean",
+    "collar": "Full",
+    "base": "Crown 309 (black)",
+    "bushing": "Crown 300 series",
+    "spring": true,
+    "grommet": "35A",
+    "actuator": 16,
+    "switch": "3x Gersung V1623A3, 1x Gersung V023A23",
+    "switch_spacing": 16,
+    "notes": "Custom order by contacting Helpme. Kakaotalk: junius17",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "309f": {
     "name": "Crown 309K",
     "is_available": true,
-    "battop": "Crown 303/307/209 series",
+    "battop": "Crown 303/307/309 series",
     "shaft": 9,
     "mount": "Japanese",
-    "collar": "None",
+    "collar": "Flat",
     "base": "Crown 309 (black)",
     "bushing": "Crown 300 series",
     "spring": true,
@@ -138,7 +189,7 @@
   "309k": {
     "name": "Crown 309K",
     "is_available": true,
-    "battop": "Crown 303/307/209 series",
+    "battop": "Crown 303/307/309 series",
     "shaft": 9,
     "mount": "Korean",
     "collar": "Full",
@@ -153,7 +204,7 @@
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "309mj": {
-    "name": "Crown 303/307/209 series",
+    "name": "Crown 303/307/309 series",
     "is_available": true,
     "battop": "Crown 300 series",
     "shaft": 9,
