@@ -11,9 +11,11 @@ leverDisplayNames = {
   "is_available": "Availability: ",
   "battop": "Battop: ",
   "shaft": "Shaft Diameter: ",
+  "mount": "Mount: ",
   "collar": "Collar Type: ",
   "base": "Base: ",
   "bushing": "Bushing: ",
+  "spring": "Uses Spring: ",
   "grommet": "Grommet Tension: ",
   "actuator": "Actuator Diameter: ",
   "switch": "Switch Model: ",
@@ -55,10 +57,10 @@ def processArguments (parameters):  #returns a message string OR None
       data = json.load(data)  #imports entire json file
 
       if len(parameters) == 2:
-          output = "Available options:\n" + listOptions(data, parameters)
+          output = "**Available options:**\n" + listOptions(data, parameters)
           
           
-          output += "\n\n Available filters:\n" + listFilters(data, parameters)
+          output += "\n\n**Available (optional) filters:**\n" + listFilters(data, parameters)
           return output
 
       subData = data[parameters[2]]
@@ -108,7 +110,6 @@ def dataToEmbed(data):      #TODO: make this code cleaner
   randomColor = int("0x{:06x}".format(random.randint(0, 0xFFFFFF)), 16)
   print(randomColor)
   embeddedResult = discord.Embed(colour=randomColor)
-  index = 0
   #embeddedResult.set_thumbnail(url=data["logo"])
   print(len(data.keys()))
   for key in data:
@@ -128,27 +129,6 @@ def dataToEmbed(data):      #TODO: make this code cleaner
       embeddedResult.add_field(name=leverDisplayNames[key], value=data[key])
   return embeddedResult
 
-  for key in data:
-    if key == "logo":                               #direct img URL
-      embeddedResult.set_thumbnail(url=data[key])
-      print("logo")
-    elif key == "isAvailable":
-      output = ""
-      if data[key] == True:
-        output = "In Stock"
-      else:
-        output = "Discontinued"
-      print(output)
-      embeddedResult.add_field(name=leverDisplayNames[key], value=output)
-    elif isinstance(data[key], int) or isinstance(data[key], float):            #adds unit to measurements
-      output = str(data[key]) + "mm"
-      print(output)
-      embeddedResult.add_field(name=leverDisplayNames[key], value=output)
-    else:
-      print(data[key])
-      embeddedResult.add_field(name=leverDisplayNames[key], value=data[key])
-    index += 1      #iteratleverDisplayNames[key]
-  return embeddedResult
   
 def dataToString(data):       #formats data to a Discord-friendly string
   #IMPORTANT: replace with Webhooks eventually

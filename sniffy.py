@@ -1,7 +1,7 @@
 import discord
 from auth import token
 from tools import parseMessage, processArguments
-from messages import *  #helpMessage, confused
+from messages import confused  #helpMessage, confused
 #import asyncio 
 
 client = discord.Client()
