@@ -56,7 +56,26 @@ def infoMode(parameters):
 
 
 def compareMode(parameters):
-  return
+  #parameters = "compare myoungshin taeyoung"
+  data = {}   #working dictionary
+  absolutePath = os.path.dirname(__file__)
+  with open(absolutePath + "/json/levers.json", "r") as data:
+    data = json.load(data)  #imports entire json file
+  
+  if len(parameters) != 3:
+    return [confused]   #TODO make dedicated description of compare mode
+
+  lever1 = data[parameters[1]]  #data[myoungshin]
+  lever2 = data[parameters[2]]  #data[taeyoung]
+
+  lever1Diff = {}
+  lever2Diff = {}
+  for key in lever1:    #Same keys are in both levers
+    if lever1[key] != lever2[key]:
+      lever1Diff.update(lever1[key])
+      lever2Diff.update(lever2[key])
+
+  return  dataToEmbed(lever1Diff), dataToEmbed(lever2)
 
 def processArguments (parameters):  #returns a message string OR None
   validArg0 = ["info", "help"] #later implement: compare

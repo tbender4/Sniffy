@@ -1,6 +1,6 @@
 import discord
 from auth import token
-from tools import parseMessage, processArguments, infoMode
+from tools import parseMessage, processArguments, infoMode, compareMode
 from messages import confused  #helpMessage, confused
 #import asyncio 
 
@@ -32,8 +32,9 @@ async def on_message(message):
     elif parameters[0] == "info":
       sendMessage(infoMode(parameters))
     elif parameters[0] == "compare":
-      replies = sendMessage(compareMode(parameters))
+      replies = compareMode(parameters)
       for reply in replies:
         sendMessage(reply)
+      sendMessage("Note: Only printing out *differences*. Run `~info` for full description")
 
 client.run(token)
