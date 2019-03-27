@@ -23,6 +23,8 @@ leverDisplayNames = {
   "notes": "Notes: "
 }
 
+
+
 def parseMessage (message):         # The first point of contact for Sniffy.
   messageString = message.content  #pass through full message from main program.
   print("Original message: " + messageString)
@@ -61,6 +63,11 @@ def boldDataValues (dictionary):
 
 def formatData(data):   #convert all to String with appropriate formatting
   for key in data:
+    if key == "spring":
+      if data[key] == True:
+        data.update({key:"Yes"})
+      else:
+        data.update({key:"No"})
     if key == "is_available":
       if data[key] == True:
         data.update({key:"Available"})

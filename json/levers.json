@@ -253,22 +253,5 @@
     "switch_spacing": 15.5,
     "notes": "Sold through Etokki",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/etokki.png"
-  },
-  "meat": {
-    "name": "Ikumi Mito",
-    "is_available": true,
-    "battop": "Round",
-    "shaft": 80,
-    "mount": "Missionary",
-    "collar": "Full",
-    "base": "Thick",
-    "bushing": "Clean Shaven",
-    "spring": true,
-    "grommet": "F-Cup",
-    "actuator": 80085,
-    "switch": "Men",
-    "switch_spacing": 80085,
-    "notes": "Thick Tsundere",
-    "logo": "https://randomc.net/image/Shokugeki%20no%20Souma/Shokugeki%20no%20Souma%20-%2006%20-%20Large%2017.jpg"
   }
 }
