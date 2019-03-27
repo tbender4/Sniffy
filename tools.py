@@ -54,6 +54,21 @@ def infoMode(parameters):
     #return dataToString(subData)
   return dataToEmbed(subData)
 
+def boldDataValues (dictionary):
+  for key in dictionary:
+    dictionary.update({key: "**" + dictionary[key] + "**"})
+  return dictionary
+
+def formatData(data):   #convert all to String with appropriate formatting
+  for key in data:
+    if key == "is_available":
+      if data[key] == True:
+        data.update({key:"Available"})
+      else:
+        data.update({key:"Unavailable"})
+    elif isinstance(data[key], (int, float)) and not isinstance(data[key], bool):
+      data.update({key:str(data[key]) + "mm"})
+  return data
 
 def compareMode(parameters):
   #parameters = "compare myoungshin taeyoung"
@@ -65,17 +80,26 @@ def compareMode(parameters):
   if len(parameters) != 3:
     return [confused]   #TODO make dedicated description of compare mode
 
-  lever1 = data[parameters[1]]  #data[myoungshin]
-  lever2 = data[parameters[2]]  #data[taeyoung]
-
+  # convert all values to string + pre-format TODO: clean up dataToEmbed code.
+  lever1 = formatData(data[parameters[1]]) #data[myoungshin]
+  lever2 = formatData(data[parameters[2]]) #data[taeyoung]
   lever1Diff = {}
   lever2Diff = {}
-  for key in lever1:    #Same keys are in both levers
-    if lever1[key] != lever2[key]:
-      lever1Diff.update(lever1[key])
-      lever2Diff.update(lever2[key])
+  common = {}
+  for key in lever1:
+    if lever1[key] == lever2[key]:
+      common.update({key: lever1[key]})
+    else:
+      lever1Diff.update({key: lever1[key]})
+      lever2Diff.update({key: lever2[key]})
 
-  return  dataToEmbed(lever1Diff), dataToEmbed(lever2)
+  lever1Embed = dataToEmbed(boldDataValues(lever1Diff))
+  lever2Embed = dataToEmbed(boldDataValues(lever2Diff))
+  commonEmbed = dataToEmbed(common)
+  lever1Embed.set_author(name=parameters[1])
+  lever2Embed.set_author(name=parameters[2])
+  commonEmbed.set_author(name="Common in both")
+  return  [lever1Embed, lever2Embed, commonEmbed]
 
 def processArguments (parameters):  #returns a message string OR None
   validArg0 = ["info", "help"] #later implement: compare
@@ -146,6 +170,7 @@ def listOptions(data, parameters): #exports keys to a list
   
   return output
 
+
 def dataToEmbed(data):      #TODO: make this code cleaner
   randomColor = int("0x{:06x}".format(random.randint(0, 0xFFFFFF)), 16)
   print(randomColor)
@@ -155,16 +180,6 @@ def dataToEmbed(data):      #TODO: make this code cleaner
   for key in data:
     if key == "logo":
       embeddedResult.set_thumbnail(url=data[key])
-    elif key == "isAvailable":
-      status = ""
-      if data[key] == True:
-        status = "In Stock"
-      else:
-        status = "Discontinued"
-      embeddedResult.add_field(name=leverDisplayNames[key], value=status)
-    elif isinstance(data[key], (int, float)) and not isinstance(data[key], bool):
-      measurementWithUnit = str(data[key]) + "mm"
-      embeddedResult.add_field(name=leverDisplayNames[key], value=measurementWithUnit)
     else:
       embeddedResult.add_field(name=leverDisplayNames[key], value=data[key])
   return embeddedResult

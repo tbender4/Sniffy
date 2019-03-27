@@ -15,26 +15,29 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-  def sendMessage(reply):
-    if type(reply) is str:
-      await client.send_message(message.channel, reply)
-    else:
-      await client.send_message(message.channel, embed=reply)
-    return
 
   if message.author.bot: #will ignore bots
     return
 
   if message.content.startswith(prefix):
     parameters = parseMessage(message)
+    #await message.channel.send("test")
     if len(parameters) == 0:
-      sendMessage(confused)
+      await message.channel.send(confused)
+      return
     elif parameters[0] == "info":
-      sendMessage(infoMode(parameters))
+      output = infoMode(parameters)
+      if isinstance(output, discord.Embed):
+        await message.channel.send(embed=output)
+      else:
+        await message.channel.send(output)
+        return
     elif parameters[0] == "compare":
       replies = compareMode(parameters)
+      if replies[0] == confused:
+        await message.channel.send(replies[0])
+        return
       for reply in replies:
-        sendMessage(reply)
-      sendMessage("Note: Only printing out *differences*. Run `~info` for full description")
+        await message.channel.send(embed=reply)
 
 client.run(token)
