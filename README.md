@@ -14,7 +14,7 @@ cd sniffy
 ```
 See [this guide](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) to generate a unique authorization token. Add your token to `auth.py` in the following format:
 ```python
-auth = "YOUR_TOKEN_HERE"
+token = "YOUR_TOKEN_HERE"
 ```
 Note: Keep the token surrounded by parentheses.
 
