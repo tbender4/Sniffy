@@ -182,7 +182,7 @@ def dataToEmbed(data):      #TODO: make this code cleaner
   randomColor = int("0x{:06x}".format(random.randint(0, 0xFFFFFF)), 16)
   print(randomColor)
   embeddedResult = discord.Embed(colour=randomColor)
-  #embeddedResult.set_thumbnail(url=data["logo"])
+  data = formatData(data)
   print(len(data.keys()))
   for key in data:
     if key == "logo":

@@ -1,10 +1,6 @@
 import discord
 from auth import token
-<<<<<<< HEAD
-from tools import parseMessage, processArguments
-=======
 from tools import parseMessage, processArguments, infoMode, compareMode
->>>>>>> py37
 from messages import confused  #helpMessage, confused
 #import asyncio 
 
