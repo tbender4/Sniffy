@@ -1,11 +1,12 @@
 Sniffy is a Discord bot that prints lever information on demand.
 
-Requirements:
+## Requirements:
 - Python 3.7
 - discord.py **rewrite branch**
 - A valid authorization token as string variable in `auth.py`
 
-##Installation
+## Installation
+
 ```
 pip install -U git+https://github.com/Rapptz/discord.py@rewrite
 git clone https://github.com/tbender4/Sniffy.git
@@ -17,5 +18,5 @@ auth = "YOUR_TOKEN_HERE"
 ```
 Note: Keep the token surrounded by parentheses.
 
-Run with:
+Finally, run the bot with:
 ```python3 sniffy.py```
