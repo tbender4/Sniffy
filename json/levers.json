@@ -13,8 +13,8 @@
     "actuator": 15.1,
     "switch": "Gersung V1623A3",
     "switch_spacing": 16,
-    "notes": "Same grommet as Myoungshin. Higher tension comes from oversized bushing",
-    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
+    "notes": "Same latex grommet as Myoungshin. Higher tension comes from oversized bushing",
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/fujinv3.jpg"
   },
   "fujinv2": {
     "name": "Fujin v2",
@@ -30,8 +30,8 @@
     "actuator": 15.1,
     "switch": "Panasonic AM51630C69N",
     "switch_spacing": 16,
-    "notes": "Same grommet as Myoungshin. Higher tension comes from oversized bushing",
-    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
+    "notes": "Same latex grommet as Myoungshin. Higher tension comes from oversized bushing",
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/istmall.png"
   },
   "kazev3": {
     "name": "Kaze V3",
@@ -48,7 +48,7 @@
     "switch": "Gersung V1623A3KZ",
     "switch_spacing": 16.5,
     "notes": "Exclusive A3 switch for this model.",
-    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/istmall.png"
   },
   "airbag": {
     "name": "Myoungshin Fanta Airbag",
@@ -64,7 +64,7 @@
     "actuator": 16.4,
     "switch": "Panasonic AM51630C69N",
     "switch_spacing": 16.5,
-    "notes": "Has custom switch support plate",
+    "notes": "Has custom switch support plate. Plate still available from ISTMall",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
   },
   "alpha": {
@@ -82,7 +82,7 @@
     "switch": "DECO VP533A-2FR",
     "switch_spacing": 16.5,
     "notes": "",
-    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/alpha.jpg"
   },
   "myoungshin": {
     "name": "Myoungshin Fanta",
@@ -149,7 +149,7 @@
     "actuator": 15.3,
     "switch": "Gersung V1623A3",
     "switch_spacing": 16,
-    "notes": "First batch of CDP has 15mm actuator, more oversized bushing.\nCustom order possible by contacting Crazydongpal. Kakaotalk: crazydongpal",
+    "notes": "First batch of CDP has 15mm actuator. \n Orders possible by contacting Crazydongpal. **Kakaotalk:** crazydongpal",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "309helpme": {
@@ -164,9 +164,9 @@
     "spring": true,
     "grommet": "35A",
     "actuator": 16,
-    "switch": "3x Gersung V1623A3, 1x Gersung V023A23",
+    "switch": "1x Gersung V1623A3 (up), 3x Gersung V023A23",
     "switch_spacing": 16,
-    "notes": "Custom order by contacting Helpme. Kakaotalk: junius17",
+    "notes": "Custom order by contacting Helpme. **Kakaotalk**: junius17",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "309f": {
@@ -183,7 +183,7 @@
     "actuator": 16,
     "switch": "Gersung V1623A3",
     "switch_spacing": 16,
-    "notes": "Commonly mistakened with 309 Helpme",
+    "notes": "Flat plate (collarless) version of the 309 series",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "309k": {
@@ -200,15 +200,15 @@
     "actuator": 16,
     "switch": "Gersung V1623A3",
     "switch_spacing": 16,
-    "notes": "Commonly mistakened with 309 Helpme",
+    "notes": "Formerly solid as 309 Helpme, still found under that name on FocusAttack.",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "309mj": {
-    "name": "Crown 303/307/309 series",
+    "name": "Crown 309MJ",
     "is_available": true,
     "battop": "Crown 300 series",
     "shaft": 9,
-    "mount": "Korean",
+    "mount": "Japanese",
     "collar": "Low Profile",
     "base": "Crown 309 (black)",
     "bushing": "Crown 300 series",
@@ -217,7 +217,7 @@
     "actuator": 16,
     "switch": "Gersung V1623A3",
     "switch_spacing": 16,
-    "notes": "Notes here",
+    "notes": "Low-profile collar, Japanese mounting plate, and low tension to appeal for newcomers.",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/samducksa.jpeg"
   },
   "green": {
@@ -235,7 +235,24 @@
     "switch": "Panasonic AM51630C69N",
     "switch_spacing": 16.5,
     "notes": "Specialized lever. More details here: <https://imgur.com/a/w8eHR>",
-    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/myoungshin.png"
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/green.png"
+  },
+  "golden": {
+    "name": "Golden Lever",
+    "is_available": true,
+    "battop": "Golden Ring Battop",
+    "shaft": 8.5,
+    "mount": "Korean + Japanese",
+    "collar": "Low Profile",
+    "base": "Golden Base",
+    "bushing": "Delrin Core with spring",
+    "spring": false,
+    "grommet": "50A",
+    "actuator": 15.4,
+    "switch": "Gersung V1623A2",
+    "switch_spacing": 15.5,
+    "notes": "Manufactured and sold by Etokki. 30A tension grommet also available",
+    "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/etokki.png"
   },
   "taeyoung": {
     "name": "Taeyoung Fanta",
@@ -251,7 +268,7 @@
     "actuator": 15.4,
     "switch": "Gersung V1623A2",
     "switch_spacing": 15.5,
-    "notes": "Sold through Etokki",
+    "notes": "Manufactured and sold by Etokki. 30A tension grommet also available",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/etokki.png"
   }
 }
