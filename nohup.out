@@ -1,0 +1,276 @@
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 29, in on_message
+    output = infoMode(parameters)
+  File "/home/pi/Sniffy/tools.py", line 51, in infoMode
+    subData = data[parameters[1]]   #info myoungshin <- subDictionary from 'myoungshin' key
+KeyError: 'cuujin'
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 29, in on_message
+    output = infoMode(parameters)
+  File "/home/pi/Sniffy/tools.py", line 51, in infoMode
+    subData = data[parameters[1]]   #info myoungshin <- subDictionary from 'myoungshin' key
+KeyError: 'cuujin'
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 29, in on_message
+    output = infoMode(parameters)
+  File "/home/pi/Sniffy/tools.py", line 51, in infoMode
+    subData = data[parameters[1]]   #info myoungshin <- subDictionary from 'myoungshin' key
+KeyError: 'cuujin'
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 29, in on_message
+    output = infoMode(parameters)
+  File "/home/pi/Sniffy/tools.py", line 51, in infoMode
+    subData = data[parameters[1]]   #info myoungshin <- subDictionary from 'myoungshin' key
+KeyError: 'suujin'
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 31, in on_message
+    await message.channel.send(embed=output)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/abc.py", line 776, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/http.py", line 222, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400): Invalid Form Body
+In embed.fields.0.value: This field is required
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 31, in on_message
+    await message.channel.send(embed=output)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/abc.py", line 776, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/http.py", line 222, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400): Invalid Form Body
+In embed.fields.0.value: This field is required
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 31, in on_message
+    await message.channel.send(embed=output)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/abc.py", line 776, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/http.py", line 222, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400): Invalid Form Body
+In embed.fields.0.value: This field is required
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 29, in on_message
+    output = infoMode(parameters)
+  File "/home/pi/Sniffy/tools.py", line 51, in infoMode
+    subData = data[parameters[1]]   #info myoungshin <- subDictionary from 'myoungshin' key
+KeyError: 'fuujinv2'
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 31, in on_message
+    await message.channel.send(embed=output)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/abc.py", line 776, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/http.py", line 222, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400): Invalid Form Body
+In embed.fields.0.value: This field is required
+Fatal read error on socket transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x7532ff70>
+transport: <_SelectorSocketTransport fd=6 read=polling write=<idle, bufsize=0>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/selector_events.py", line 723, in _read_ready
+    data = self._sock.recv(self.max_size)
+OSError: [Errno 113] No route to host
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 41, in on_message
+    await message.channel.send(embed=reply)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/abc.py", line 776, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/http.py", line 222, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400): Invalid Form Body
+In embed.thumbnail.url: Not a well formed URL.
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 41, in on_message
+    await message.channel.send(embed=reply)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/abc.py", line 776, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/http.py", line 222, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400): Invalid Form Body
+In embed.thumbnail.url: Not a well formed URL.
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 41, in on_message
+    await message.channel.send(embed=reply)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/abc.py", line 776, in send
+    data = await state.http.send_message(channel.id, content, tts=tts, embed=embed, nonce=nonce)
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/http.py", line 222, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400): Invalid Form Body
+In embed.thumbnail.url: Not a well formed URL.
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/discord/client.py", line 255, in _run_event
+    await coro(*args, **kwargs)
+  File "sniffy.py", line 36, in on_message
+    replies = compareMode(parameters)
+  File "/home/pi/Sniffy/tools.py", line 91, in compareMode
+    lever1 = formatData(data[parameters[1]]) #data[myoungshin]
+KeyError: '309'
+We have logged in as Sniffy#6917
+Original message: ~ info cuujin
+Original message: ~info airbag
+401044
+15
+Original message: ~info
+~~~~~~~~~~~~~~~~~LIST FILTERS~~~~~~~~~~~~~~~~~~
+{'notes': 'Manufactured and sold by Etokki. 30A tension grommet also available', 'base': 'Taeyoung Fanta', 'bushing': 'Taeyoung Fanta', 'mount': 'Korean', 'name': 'Taeyoung Fanta', 'switch': 'Gersung V1623A2', 'switch_spacing': 15.5, 'spring': False, 'is_available': True, 'logo': 'https://github.com/tbender4/Sniffy/raw/master/logos/etokki.png', 'collar': 'Full', 'battop': 'Taeyoung Fanta (matte)', 'shaft': 9, 'actuator': 15.4, 'grommet': '40A'}
+['info', 'alpha']
+Original message: ~info cdp
+3917848
+15
+Original message: ~info cuujin
+Original message: ~info green
+10959504
+15
+Original message: ~info coorejam
+2375402
+15
+Original message: ~info cuujin
+Original message: ~info suujin
+Original message: ~info
+~~~~~~~~~~~~~~~~~LIST FILTERS~~~~~~~~~~~~~~~~~~
+{'notes': 'Manufactured and sold by Etokki. 30A tension grommet also available', 'base': 'Taeyoung Fanta', 'bushing': 'Taeyoung Fanta', 'mount': 'Korean', 'name': 'Taeyoung Fanta', 'switch': 'Gersung V1623A2', 'switch_spacing': 15.5, 'spring': False, 'is_available': True, 'logo': 'https://github.com/tbender4/Sniffy/raw/master/logos/etokki.png', 'collar': 'Full', 'battop': 'Taeyoung Fanta (matte)', 'shaft': 9, 'actuator': 15.4, 'grommet': '40A'}
+['info', 'airbag']
+Original message: ~info cuujin
+5884329
+15
+Original message: ~info alpha
+13524436
+15
+Original message: ~info
+~~~~~~~~~~~~~~~~~LIST FILTERS~~~~~~~~~~~~~~~~~~
+{'notes': 'Manufactured and sold by Etokki. 30A tension grommet also available', 'base': 'Taeyoung Fanta', 'bushing': 'Taeyoung Fanta', 'mount': 'Korean', 'name': 'Taeyoung Fanta', 'switch': 'Gersung V1623A2', 'switch_spacing': 15.5, 'spring': False, 'is_available': True, 'logo': 'https://github.com/tbender4/Sniffy/raw/master/logos/etokki.png', 'collar': 'Full', 'battop': 'Taeyoung Fanta (matte)', 'shaft': 9, 'actuator': 15.4, 'grommet': '40A'}
+['info', 'airbag']
+Original message: ~info alpha
+11300805
+15
+Original message: ~info alpha
+6489943
+15
+Original message: ~info green
+9661972
+15
+Original message: ~info fuujinv2
+Original message: ~info fujinv2
+2534580
+15
+Original message: ~info cdp
+5053579
+15
+Original message: ~info alpha
+8317227
+15
+Original message: ~info airbag
+2792495
+15
+Original message: ~info alpha
+8759421
+15
+Original message: ~info alpha
+5671324
+15
+Original message: ~info alpha
+14999432
+15
+Original message: ~info cuujin
+8020639
+15
+We have logged in as Sniffy#6917
+We have logged in as Sniffy#6917
+We have logged in as Sniffy#6917
+Original message: ~info cuujin
+7052358
+15
+Original message: ~info cuujin
+683254
+15
+Original message: ~info cuujin
+4899499
+15
+Original message: ~info cuujin
+1644147
+15
+Original message: ~info cuujin
+2583140
+15
+Original message: ~compare cuujin fujinv3
+9244128
+8
+3549409
+8
+15535144
+7
+Original message: ~compare
+Original message: ~info
+~~~~~~~~~~~~~~~~~LIST FILTERS~~~~~~~~~~~~~~~~~~
+{'notes': 'Manufactured and sold by Etokki. 30A tension grommet also available', 'base': 'Taeyoung Fanta', 'bushing': 'Taeyoung Fanta', 'mount': 'Korean', 'name': 'Taeyoung Fanta', 'switch': 'Gersung V1623A2', 'switch_spacing': 15.5, 'spring': False, 'is_available': True, 'logo': 'https://github.com/tbender4/Sniffy/raw/master/logos/etokki.png', 'collar': 'Full', 'battop': 'Taeyoung Fanta (matte)', 'shaft': 9, 'actuator': 15.4, 'grommet': '40A'}
+['info', '309k']
+Original message: ~compare fujinv3 cuujin
+12219812
+8
+15583053
+8
+14013979
+7
+Original message: ~compare 309k 309f
+11907273
+3
+334202
+3
+11642458
+12
+Original message: ~info fujinv3
+334082
+15
+Original message: ~compare fujinv3 cdp
+13137195
+12
+14978080
+12
+6854262
+3
+Original message: ~compare 309 cp
+Original message: ~compare 309k cdp
+8243945
+9
+3394039
+9
+13403903
+6

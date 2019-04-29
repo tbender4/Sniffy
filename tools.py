@@ -84,12 +84,18 @@ def compareMode(parameters):
   with open(absolutePath + "/json/levers.json", "r") as data:
     data = json.load(data)  #imports entire json file
   
+  if len(parameters) == 1:
+    output = "**Available options:**\n" + listOptions(data, parameters)
+    return output
+
   if len(parameters) != 3:
     return [confused]   #TODO make dedicated description of compare mode
 
   # convert all values to string + pre-format TODO: clean up dataToEmbed code.
-  lever1 = formatData(data[parameters[1]]) #data[myoungshin]
-  lever2 = formatData(data[parameters[2]]) #data[taeyoung]
+  lever1 = data[parameters[1]]  #data[myoungshin]
+  lever2 = data[parameters[2]]  #data[taeyoung]
+  #lever1 = formatData(data[parameters[1]]) #data[myoungshin]
+  #lever2 = formatData(data[parameters[2]]) #data[taeyoung]
   lever1Diff = {}
   lever2Diff = {}
   common = {}
@@ -100,8 +106,11 @@ def compareMode(parameters):
       lever1Diff.update({key: lever1[key]})
       lever2Diff.update({key: lever2[key]})
 
-  lever1Embed = dataToEmbed(boldDataValues(lever1Diff))
-  lever2Embed = dataToEmbed(boldDataValues(lever2Diff))
+  lever1Embed = dataToEmbed(lever1Diff)
+  lever2Embed = dataToEmbed(lever2Diff)
+  #TODO: Properly implement bold
+  #lever1Embed = dataToEmbed(boldDataValues(lever1Diff))
+  #lever2Embed = dataToEmbed(boldDataValues(lever2Diff))
   commonEmbed = dataToEmbed(common)
   lever1Embed.set_author(name=parameters[1])
   lever2Embed.set_author(name=parameters[2])
@@ -155,9 +164,7 @@ def listFilters(data, parameters): #exports keys to a list
   filterParameters = parameters
   filterParameters.append(random.choice(list(data)))
 
-  print("~~~~~~~~~~~~~~~~~LIST FILTERS~~~~~~~~~~~~~~~~~~")
   print(filterData)
-
   print(filterParameters)
 
   output = listOptions(filterData, filterParameters)  #reuse of listOptions
@@ -172,7 +179,14 @@ def listOptions(data, parameters): #exports keys to a list
   output += "Example: `~"
   for parameter in parameters: #prints out existing parameters, then adds a random parameter
     output += "{} ".format(parameter)
-  output += random.choice(list(data))
+  if parameter[0] == "compare":
+    random = str(random.choice(list(data)))
+    random2 = str(random.choice(list(data)))
+    while (random2 == random):
+      random2 = random.choice(list(data))
+    output += random
+    output += random2
+
   output += "`"
   
   return output

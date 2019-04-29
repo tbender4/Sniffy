@@ -21,7 +21,6 @@ async def on_message(message):
 
   if message.content.startswith(prefix):
     parameters = parseMessage(message)
-    #await message.channel.send("test")
     if len(parameters) == 0:
       await message.channel.send(confused)
       return
@@ -36,9 +35,6 @@ async def on_message(message):
       replies = compareMode(parameters)
       if replies[0] == confused:
         await message.channel.send(replies[0])
-        return
-      if isinstance(replies, str):
-        await message.channel.send(replies)     #str type means listOptions(data)
         return
       for reply in replies:
         await message.channel.send(embed=reply)
