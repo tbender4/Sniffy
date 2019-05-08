@@ -2,7 +2,7 @@ import json
 import os
 import random
 import discord
-from messages import *
+from messages import confused, helpMessage
 #tools to format strings
 
 
@@ -180,12 +180,12 @@ def listOptions(data, parameters): #exports keys to a list
   for parameter in parameters: #prints out existing parameters, then adds a random parameter
     output += "{} ".format(parameter)
   if parameter[0] == "compare":
-    random = str(random.choice(list(data)))
-    random2 = str(random.choice(list(data)))
-    while (random2 == random):
-      random2 = random.choice(list(data))
-    output += random
-    output += random2
+    randomColor = str(random.choice(list(data)))
+    randomColor2 = str(random.choice(list(data)))
+    while (randomColor2 == random):
+      randomColor2 = random.choice(list(data))
+    output += randomColor
+    output += randomColor2
 
   output += "`"
   
