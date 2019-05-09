@@ -6,7 +6,7 @@
     "shaft": 9,
     "mount": "Japanese + Korean",
     "collar": "Full",
-    "base": "Custom Fujin",
+    "base": "Fujin",
     "bushing": "Crown DX Bushing",
     "spring": false,
     "grommet": "45A",
@@ -19,12 +19,12 @@
   "fujinv3": {
     "name": "Fujin v3",
     "is_available": true,
-    "battop": "CCustom Fujin frosted top",
+    "battop": "Custom frosted top (threaded on plastic)",
     "shaft": 7,
     "mount": "Japanese + Korean",
     "collar": "Full",
-    "base": "Custom Fujin",
-    "bushing": "Custom Oversized",
+    "base": "Fujin",
+    "bushing": "Fujin Oversized",
     "spring": false,
     "grommet": "45A",
     "actuator": 15.1,
@@ -36,7 +36,7 @@
   "fujinv2": {
     "name": "Fujin v2",
     "is_available": false,
-    "battop": "Custom frosted top",
+    "battop": "Custom frosted top (threaded brass insert)",
     "shaft": 9,
     "mount": "Korean",
     "collar": "Full",
@@ -46,8 +46,8 @@
     "grommet": "45A",
     "actuator": 15.1,
     "switch": "Panasonic AM51630C69N",
-    "switch_spacing": 16,
-    "notes": "Same latex grommet as Myoungshin. Higher tension comes from oversized bushing",
+    "switch_spacing": 15.5,
+    "notes": "Similar latex grommet as Myoungshin with different hole placement. Higher tension comes from oversized bushing",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/istmall.png"
   },
   "kazev3": {
@@ -268,7 +268,7 @@
     "actuator": 14,
     "switch": "Omron V152-1A5 (Medium)",
     "switch_spacing": -1,
-    "notes": "Manufactured and sold by Arcade Stick Indonesia. Designed to be customizable with ASI parts.",
+    "notes": "Manufactured and sold by Arcade Stick Indonesia. Switch spacing can be adjusted with jigs. Designed to be customizable with ASI parts.",
     "logo": "https://github.com/tbender4/Sniffy/raw/master/logos/asi.jpeg"
   },
   "taeyoung": {
